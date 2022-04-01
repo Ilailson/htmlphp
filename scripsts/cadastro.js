@@ -1,4 +1,4 @@
-function createUser(){
+function createUser() {
     //pegando os elemeneto que o usuário digitar na tela.
     const name = document.getElementById('name').value
     const cpf = document.getElementById('cpf').value
@@ -6,11 +6,11 @@ function createUser(){
     const phone = document.getElementById('phone').value
     const email = document.getElementById('email').value
 
-    //criando formulario 
+    //criando formulario
 
     const form = new FormData()
 
-    //pegando os valores e botando no formulario. 
+    //pegando os valores e botando no formulario.
     form.append('name', name);
     form.append('cpf', cpf);
     form.append('address', address);
@@ -19,14 +19,15 @@ function createUser(){
 
     //passando para cadastro no php.
     //definindo url
-    const url = 'http://localhost:81/youtube/cadastro.php'
+    const url = 'http://localhost:/youtube/htmlphp/cadastro.php'
+
 
     fetch(url, {
         method: 'POST',
         body: form
     }).then(response => {
         response.json().then(result => {
-           console.log(result) 
+            console.log(result)
         })
     }).catch(err => console.error(err));
 }
