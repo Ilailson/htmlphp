@@ -1,4 +1,6 @@
 <?php
+header('Acess-Control-Allow-Origin: *');
+
 $host="localhost" ;
 $user="root";
 $password="";
